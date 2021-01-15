@@ -13,22 +13,26 @@
 
     <div class="container">
         <div class="row bread-list">
-        {% for bread in breads %}
-            <a href="{% pageurl bread %}" class="col-xs-12 col-md-6 bread-list-item">
+        {% for project in projects %}
+            <a href="{% pageurl project %}" class="col-xs-12 col-md-6 bread-list-item">
                 <div class="row">
                     <div class="col-xs-4 col-sm-4 image">
-                        {% image bread.image fill-180x180-c100 as image %}
+                        {% image project.image fill-180x180-c100 as image %}
                         <img src="{{ image.url }}" width="{{ image.width }}"
                             height="{{ image.height }}" alt="{{ image.alt }}" class="" />
                     </div>
                     <div class="col-xs-6 col-sm-7">
-                        <h2>{{ bread.title }}</h2>
+                        <h2>{{ project.title }}</h2>
                         <ul class="bread-meta">
-                        {% if bread.origin %}
-                            <li><span>Origin</span> {{ bread.origin }}</li>
-                        {% endif %}
-                        {% if bread.bread_type %}
-                            <li><span>Type</span> {{ bread.bread_type }}</li>
+                        {% with segments=page.segments.all %}
+                                {% if segments %}
+                                    {% for segment in segments %}
+                                    <li><small>{{ project.origin }}</small></li>
+                                    {% endfor %}    
+                                {% endif %}
+                        {% endwith %}
+                        {% if project.url %}
+                            <li><span>Type</span> {{ project.url }}</li>
                         {% endif %}
                         </ul>
                     </div>
@@ -38,11 +42,11 @@
         </div>
     </div>
 
-    {% if breads.paginator.count > 1 %}
+    {% if projects.paginator.count > 1 %}
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                {% include "includes/pagination.html" with subpages=breads %}
+                {% include "includes/pagination.html" with subpages=projects %}
                 </div>
             </div>
         </div>

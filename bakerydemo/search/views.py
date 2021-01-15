@@ -6,7 +6,7 @@ from wagtail.core.models import Page
 from wagtail.search.models import Query
 
 from bakerydemo.blog.models import BlogPage
-from bakerydemo.breads.models import BreadPage
+from bakerydemo.projects.models import ProjectPage as BreadPage
 from bakerydemo.locations.models import LocationPage
 
 

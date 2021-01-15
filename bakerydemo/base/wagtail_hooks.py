@@ -1,7 +1,7 @@
 from wagtail.contrib.modeladmin.options import (
     ModelAdmin, ModelAdminGroup, modeladmin_register)
 
-from bakerydemo.breads.models import Country, BreadIngredient, BreadType
+from bakerydemo.projects.models import Segments
 from bakerydemo.base.models import People, FooterText
 
 '''
@@ -21,28 +21,12 @@ font-awesome icon set is available to you. Options are at http://fontawesome.io/
 '''
 
 
-class BreadIngredientAdmin(ModelAdmin):
+class ProjectSegmentAdmin(ModelAdmin):
     # These stub classes allow us to put various models into the custom "Wagtail Bakery" menu item
     # rather than under the default Snippets section.
-    model = BreadIngredient
+    model = Segments
+    menu_icon = 'fa-suitcase'
     search_fields = ('name', )
-
-
-class BreadTypeAdmin(ModelAdmin):
-    model = BreadType
-    search_fields = ('title', )
-
-
-class BreadCountryAdmin(ModelAdmin):
-    model = Country
-    search_fields = ('title', )
-
-
-class BreadModelAdminGroup(ModelAdminGroup):
-    menu_label = 'Bread Categories'
-    menu_icon = 'fa-suitcase'  # change as required
-    menu_order = 200  # will put in 3rd place (000 being 1st, 100 2nd)
-    items = (BreadIngredientAdmin, BreadTypeAdmin, BreadCountryAdmin)
 
 
 class PeopleModelAdmin(ModelAdmin):
@@ -62,11 +46,13 @@ class FooterTextAdmin(ModelAdmin):
 class BakeryModelAdminGroup(ModelAdminGroup):
     menu_label = 'Bakery Misc'
     menu_icon = 'fa-cutlery'  # change as required
-    menu_order = 300  # will put in 4th place (000 being 1st, 100 2nd)
+      # will put in 4th place (000 being 1st, 100 2nd)
     items = (PeopleModelAdmin, FooterTextAdmin)
 
 
 # When using a ModelAdminGroup class to group several ModelAdmin classes together,
 # you only need to register the ModelAdminGroup class with Wagtail:
-modeladmin_register(BreadModelAdminGroup)
-modeladmin_register(BakeryModelAdminGroup)
+modeladmin_register(ProjectSegmentAdmin)
+#modeladmin_register(BreadModelAdminGroup)
+#modeladmin_register(BakeryModelAdminGroup)
+

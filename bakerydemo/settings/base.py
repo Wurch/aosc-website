@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'bakerydemo.base',
     'bakerydemo.blog',
-    'bakerydemo.breads',
+    'bakerydemo.projects',
     'bakerydemo.locations',
     'bakerydemo.search',
 

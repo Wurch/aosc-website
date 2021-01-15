@@ -29,26 +29,14 @@
                             {% image page.image width-500 %}
                         </figure>
                         <ul class="bread-meta">
-                            {% if page.origin %}
-                                <li>
-                                    <h4>Origin</h4>
-                                    <p>{{ page.origin }}</p>
-                                </li>
-                            {% endif %}
-                            {% if page.bread_type %}
-                                <li>
-                                    <h4>Type</h4>
-                                    <p>{{ page.bread_type }}</p>
-                                </li>
-                            {% endif %}
-                            {% with ingredients=page.ingredients.all %}
-                                {% if ingredients %}
+                            {% with segments=page.segment.all %}
+                                {% if segments %}
                                     <li>
-                                        <h4>Ingredients</h4>
+                                        <h4>Segments</h4>
                                         <ul>
-                                            {% for ingredient in ingredients %}
+                                            {% for segment in segments %}
                                                 <li>
-                                                    {{ ingredient.name }}
+                                                    {{ segment.name }}
                                                 </li>
                                             {% endfor %}
                                         </ul>
