@@ -23,17 +23,14 @@
                     </div>
                     <div class="col-xs-6 col-sm-7">
                         <h2>{{ project.title }}</h2>
-                        <ul class="bread-meta">
-                        {% with segments=page.segments.all %}
+                        <ul class="bread-meta mb-0">
+                        {% with segments=project.segments.all %}
                                 {% if segments %}
-                                    {% for segment in segments %}
-                                    <li><small>{{ project.origin }}</small></li>
+                                    {% for segment in segments|slice:":2  " %}
+                                    <li><small>{{ segment }}</small></li>
                                     {% endfor %}    
                                 {% endif %}
                         {% endwith %}
-                        {% if project.url %}
-                            <li><span>Type</span> {{ project.url }}</li>
-                        {% endif %}
                         </ul>
                     </div>
                 </div>

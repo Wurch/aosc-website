@@ -4,6 +4,7 @@ from wagtail.core.blocks import (
     CharBlock, ChoiceBlock, RichTextBlock, StreamBlock, StructBlock, TextBlock,
 )
 
+from wagtailcodeblock.blocks import CodeBlock
 
 class ImageBlock(StructBlock):
     """
@@ -48,7 +49,6 @@ class BlockQuote(StructBlock):
         icon = "fa-quote-left"
         template = "blocks/blockquote.html"
 
-
 # StreamBlocks
 class BaseStreamBlock(StreamBlock):
     """
@@ -59,6 +59,7 @@ class BaseStreamBlock(StreamBlock):
         icon="fa-paragraph",
         template="blocks/paragraph_block.html"
     )
+    code_block = CodeBlock(label='Code block')
     image_block = ImageBlock()
     block_quote = BlockQuote()
     embed_block = EmbedBlock(

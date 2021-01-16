@@ -26,7 +26,7 @@ body {
 
 @media (min-width: 768px) {
   body {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 
@@ -56,7 +56,7 @@ h4 {
   font-weight: 600;
   font-family: 'Lato', sans-serif;
   color: rgb(57, 98, 147);
-  font-size: 22px;
+  font-size: 16px;
 }
 
 p {
@@ -70,7 +70,7 @@ a, a:focus, a:visited {
 }
 
 a:hover {
-  color: #eb7400;
+  color: rgba(21,38,44,0.8);
   text-decoration: none;
 }
 
@@ -87,7 +87,7 @@ a.btn {
 }
 
 a.btn:hover {
-  background-color: #eb7400;
+  background-color: rgba(21,38,44,0.8);
   color: white;
 }
 
@@ -173,7 +173,7 @@ figure img {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   margin: 0 0 40px;
-  font-size: 22px;
+  font-size: 16px;
 }
 .stand-first {
   color: rgba(255,255,255,0.8);
@@ -589,7 +589,7 @@ time.location-time {
 
 .blog-list-item .image {
   overflow: hidden;
-  background-color: #eb7400;
+  background-color: rgba(21,38,44,0.8);
   flex: 1 0 auto;
 }
 
@@ -677,7 +677,7 @@ span.outline {
 }
 
 .bread-list-item .image {
-  background-color: #eb7400;
+  background-color: rgba(21,38,44,0.8);
   margin: 0;
   max-width: 180px;
   max-height: 180px;
@@ -809,7 +809,7 @@ span.outline {
 }
 
 .homepage .hero h1 {
-  font-size: 2.2em;
+  font-size: 4em;
   text-transform: uppercase;
 }
 
@@ -829,7 +829,7 @@ span.outline {
 }
 .homepage .home-hero .lead {
   color: #ddd;
-  font-size: 1.6em;
+  font-size: 3rem;
   margin: 40px auto;
 }
 
@@ -848,7 +848,7 @@ span.outline {
 .homepage .home-hero .hero-cta-link:before {
   content: "\f18e";
   font-family: FontAwesome;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 200;
   opacity: 0.8;
   padding: 0 1px;
@@ -918,7 +918,7 @@ span.outline {
   }
   .homepage .promo p {
     color: #fff;
-    font-size: 1em;
+    font-size: 1.8em;
   }
 }
 @media (max-width: 766px) {
@@ -953,7 +953,7 @@ span.outline {
 .homepage .feature-1 .featured-children li h3 {
   margin-top: 40px;
   font-weight: 300;
-  font-size: 1.4em;
+  font-size: 2.5em;
 }
 .homepage .feature-2 {
   padding: 40px 0 20px;
@@ -1003,7 +1003,7 @@ span.outline {
 .homepage .feature-3 h3 {
   color: #fff;
   font-weight: 300;
-  font-size: 1.8em;
+  font-size: 3.2em;
   margin-bottom: 135px;
   margin-top: -145px;
   position: relative;
